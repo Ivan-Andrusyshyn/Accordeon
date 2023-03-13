@@ -1,0 +1,50 @@
+.container {
+  margin: 0 auto;
+
+  padding: 20px;
+}
+li {
+  transition-property: color;
+  transition-duration: 400ms linear;
+  height: 100%;
+  padding: 0;
+  padding-top: 10px;
+  position: relative;
+}
+ul {
+  padding: 10px;
+}
+h2 {
+  margin: 0;
+}
+h2:hover {
+  transform: translateX(3px);
+  cursor: pointer;
+  color: aqua;
+  transition-property: width, transform;
+  transition-duration: 4s linear;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  /* position: absolute; */
+  /* bottom: 0; */
+  width: 0%;
+  height: 1px;
+  background-color: green;
+  transition-property: width, transform;
+  transition-duration: 2000ms linear;
+}
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+h2:hover::after {
+  width: 100%;
+}
+h1 {
+  font-size: 34px;
+  text-align: center;
+}
